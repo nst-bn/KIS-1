@@ -28,7 +28,7 @@ namespace LR1
             Form3 form3 = new Form3(this);
             form3.Show();
         }
-
+        //Nastya/price
         //bibuniyTstCmmit
         private void button3_Click(object sender, EventArgs e) //закгрузить прайс-лист
         {
