@@ -27,10 +27,11 @@ namespace LR1
 
         private void LoadSalesReport()
         {
-            string connectString = @"Data Source = (localdb)\MSSQLLocalDB; AttachDbFilename = E:\Laba\LR1\KIS.mdf; Integrated Security = True";
+            chart1.Titles.Add("Отчет по ценам");    
+            string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=KIS;Integrated Security=True;Pooling=False";
 
             SqlConnection myConnection = new SqlConnection(connectString);
-
+            int n = 0;
             myConnection.Open();
 
             string query = "SELECT * FROM SalesRreportTable ";
@@ -49,6 +50,7 @@ namespace LR1
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
                 data[data.Count - 1][3] = reader[3].ToString();
+                n++;
             }
 
             reader.Close();
@@ -57,6 +59,12 @@ namespace LR1
 
             foreach (string[] s in data)
                 dataGridView1.Rows.Add(s);
+            
+            for (int i = 0; i < n; ++i)
+            {
+                chart1.Series[0].Points.AddY(data[i][2]);
+                chart1.Series[0].Points[i].LegendText = data[i][1];
+            }
         }
     }
 }

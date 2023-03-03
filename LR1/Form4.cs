@@ -26,7 +26,7 @@ namespace LR1
 
         private void LoadPriceList()
         {
-            string connectString = @"Data Source = (localdb)\MSSQLLocalDB; AttachDbFilename = E:\Laba\LR1\KIS.mdf; Integrated Security = True";
+            string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=KIS;Integrated Security=True;Pooling=False";
 
             SqlConnection myConnection = new SqlConnection(connectString);
 

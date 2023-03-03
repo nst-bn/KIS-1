@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(497, 511);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
@@ -61,11 +62,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(198, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(957, 192);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -102,16 +103,18 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(397, 298);
+            this.chart1.Location = new System.Drawing.Point(298, 243);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(332, 205);
+            this.chart1.Size = new System.Drawing.Size(431, 260);
             this.chart1.TabIndex = 2;
-            this.chart1.Text = "Отчет по продажам";
+            this.chart1.Text = "Отчет по ценам от продаж";
+            title1.Name = "Title1";
+            this.chart1.Titles.Add(title1);
             // 
             // Form2
             // 
@@ -121,7 +124,7 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Отчёт продаж";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
