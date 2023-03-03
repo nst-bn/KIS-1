@@ -21,5 +21,6 @@ namespace LR1
         {
             this.Close();
         }
+        //Хай хай какого хуя
     }
 }
