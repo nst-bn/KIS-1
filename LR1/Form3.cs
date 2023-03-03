@@ -42,7 +42,7 @@ namespace LR1
 
             while (reader.Read())
             {
-                data.Add(new string[6]);
+                data.Add(new string[7]);
 
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
@@ -50,6 +50,7 @@ namespace LR1
                 data[data.Count - 1][3] = reader[3].ToString();
                 data[data.Count - 1][4] = reader[4].ToString();
                 data[data.Count - 1][5] = reader[5].ToString();
+                data[data.Count - 1][6] = reader[6].ToString();
             }
 
             reader.Close();

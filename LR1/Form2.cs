@@ -27,7 +27,7 @@ namespace LR1
 
         private void LoadSalesReport()
         {
-            string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=KIS;Integrated Security=True;Pooling=False";
+            string connectString = @"Data Source = (localdb)\MSSQLLocalDB; AttachDbFilename = E:\Laba\LR1\KIS.mdf; Integrated Security = True";
 
             SqlConnection myConnection = new SqlConnection(connectString);
 
