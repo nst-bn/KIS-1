@@ -12,17 +12,14 @@ namespace LR1
 {
     public partial class Form7 : Form
     {
-        private Form1 form1;
-        public Form7(Form1 form1)
+        public Form7()
         {
             InitializeComponent();
-            this.form1 = form1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            form1.Show();
         }
     }
 }

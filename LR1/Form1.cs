@@ -19,38 +19,36 @@ namespace LR1
 
         private void button1_Click(object sender, EventArgs e) //отчёт продаж
         {
-            Form2 form2 = new Form2(this);
+            Form2 form2 = new Form2();
             form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e) //договора
         {
-            Form3 form3 = new Form3(this);
+            Form3 form3 = new Form3();
             form3.Show();
         }
-        //Nastya/price
-        //bibuniyTstCmmit
         private void button3_Click(object sender, EventArgs e) //закгрузить прайс-лист
         {
-            Form4 form4 = new Form4(this);
+            Form4 form4 = new Form4();
             form4.Show();
         }
 
         private void button4_Click(object sender, EventArgs e) //анализ потребности
         {
-            Form5 form5 = new Form5(this);
+            Form5 form5 = new Form5();
             form5.Show();
         }
 
         private void button5_Click(object sender, EventArgs e) //расчёт потребности
         {
-            Form6 form6 = new Form6(this);
+            Form6 form6 = new Form6();
             form6.Show();
         }
 
         private void button6_Click(object sender, EventArgs e) //расстановка приоритетов
         {
-            Form7 form7 = new Form7(this);
+            Form7 form7 = new Form7();
             form7.Show();
         }
     }
