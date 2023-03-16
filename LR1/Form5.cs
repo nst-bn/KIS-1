@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,47 @@ namespace LR1
         public Form5()
         {
             InitializeComponent();
+            LoadPriceList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void LoadPriceList()
+        {
+            string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=KIS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            SqlConnection myConnection = new SqlConnection(connectString);
+
+            myConnection.Open();
+
+            string query = "SELECT * FROM NeedAnalysisTable ";
+
+            SqlCommand command = new SqlCommand(query, myConnection);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<string[]> data = new List<string[]>();
+
+            while (reader.Read())
+            {
+                data.Add(new string[4]);
+
+                data[data.Count - 1][0] = reader[0].ToString();
+                data[data.Count - 1][1] = reader[1].ToString();
+                data[data.Count - 1][2] = reader[2].ToString();
+                data[data.Count - 1][3] = reader[3].ToString();
+            }
+
+            reader.Close();
+
+            myConnection.Close();
+
+            foreach (string[] s in data)
+                dataGridView1.Rows.Add(s);
+        }
     }
 }
+

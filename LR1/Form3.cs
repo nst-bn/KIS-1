@@ -60,6 +60,5 @@ namespace LR1
             foreach (string[] s in data)
                 dataGridView1.Rows.Add(s);
         }
-
     }
 }
